@@ -41,7 +41,10 @@ recvThread = threading.Thread(target=recv)
 recvThread.start()
 
 
-# CREATE FUNCTIONS HERE....
+def doubleFront():
+    for i in range(2):
+        sendmsg('flip f')
+
 
 
 print("\nAndrew Gowan")
@@ -59,7 +62,7 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        
+        doubleFront()
 
         sendmsg('land')
 
